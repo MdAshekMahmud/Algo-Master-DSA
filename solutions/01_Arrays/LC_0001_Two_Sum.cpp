@@ -1,30 +1,25 @@
-// Majority Element
+// Two Sum
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution
 {
 public:
-    int majorityElement(vector<int> &nums)
+    vector<int> twoSum(vector<int> &nums, int target)
     {
-        int n = nums.size();
+        unordered_map<int, int> seen; // value -> index
 
-        unordered_map<int, int> mp;
-
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < (int)nums.size(); i++)
         {
-            mp[nums[i]]++;
-        }
-        int count = 0;
-        for (auto el : mp)
-        {
-            if (el.second > n / 2)
+            int complement = target - nums[i];
+            if (seen.count(complement))
             {
-                return el.first;
+                return {seen[complement], i};
             }
+            seen[nums[i]] = i;
         }
 
-        return 0;
+        return {};
     }
 };
 
@@ -34,8 +29,15 @@ int main()
     cin.tie(nullptr);
 
     Solution s;
-    vector<int> nums = {2, 2, 1, 1, 1, 2, 2};
-    s.majorityElement(nums);
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+    vector<int> result = s.twoSum(nums, target);
+
+    for (int idx : result)
+    {
+        cout << idx << " ";
+    }
+    cout << endl;
 
     return 0;
 }

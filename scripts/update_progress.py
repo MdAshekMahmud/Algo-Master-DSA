@@ -95,8 +95,17 @@ def update_markdown():
 | Last Updated          | **{today}** |
 """
 
-    # Replace stats using regex
-    updated_content = re.sub(r".*?", stats_text, updated_content, flags=re.DOTALL)
+    # Replace stats using an anchored regex (FIXED: was `r".*?"` with no anchors,
+    # which matches an empty string and causes re.sub to insert stats_text at
+    # EVERY position in the file, corrupting it with thousands of repeats).
+    # This now only replaces content between the STATS_START/STATS_END markers
+    # in docs/progress.md.
+    updated_content = re.sub(
+        r"<!-- STATS_START -->.*?<!-- STATS_END -->",
+        f"<!-- STATS_START -->\n{stats_text}<!-- STATS_END -->",
+        updated_content,
+        flags=re.DOTALL,
+    )
 
     # Replace bottom Last Updated if exists
     updated_content = re.sub(

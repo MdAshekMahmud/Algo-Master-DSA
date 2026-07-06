@@ -1,4 +1,4 @@
-// Majority Element
+// Move Zeroes
 #include <bits/stdc++.h>
 using namespace std;
 
