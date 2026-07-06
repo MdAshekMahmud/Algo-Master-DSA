@@ -5,7 +5,6 @@
 ## 📊 Overall Statistics
 
 <!-- STATS_START -->
-
 | Metric                |     Value      |
 | --------------------- | :------------: |
 | Total Problems Solved |     **0**      |
@@ -13,7 +12,6 @@
 | Medium                |     **0**      |
 | Hard                  |     **0**      |
 | Last Updated          | **YYYY-MM-DD** |
-
 <!-- STATS_END -->
 
 ---
