@@ -19,7 +19,7 @@
 
 |  #  | Problem                         | Pattern | Difficulty | Status | Solution |
 | :-: | ------------------------------- | ------- | :--------: | :----: | :------: |
-|  1  | Two Sum                         | Arrays  |  🟢 Easy   |   ⬜   |    ❌    |
+|  1  | Two Sum                         | Arrays  |  🟢 Easy   |   ✅   |    ❌    |
 |  2  | Best Time to Buy and Sell Stock | Arrays  |  🟢 Easy   |   ⬜   |    ❌    |
 |  3  | Contains Duplicate              | Arrays  |  🟢 Easy   |   ⬜   |    ❌    |
 |  4  | Product of Array Except Self    | Arrays  | 🟡 Medium  |   ⬜   |    ❌    |
@@ -83,4 +83,4 @@ When a solution is completed, update the **Solution** column like this:
 
 ---
 
-**Last Updated:** YYYY-MM-DD
+**Last Updated:** 07-07-2026
